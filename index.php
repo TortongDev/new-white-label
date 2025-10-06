@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Whitelabel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- header by boostrap responsive have bar side menu and change lang thai and english and logo bland to left  -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
@@ -146,7 +147,7 @@
                         <h5 class="card-title">กรุงเทพฯ -> เชียงใหม่</h5>
                         <p class="card-text">รถบัส VIP 24 ที่นั่ง ใช้เวลาเดินทาง 9 ชม.</p>
                         <div class="mt-auto d-flex justify-content-between align-items-center">
-                        <span class="price">฿750</span>
+                        <span class="price">B 750</span>
                         <a href="#" class="btn btn-primary">จองเลย</a>
                         </div>
                     </div>
@@ -160,7 +161,7 @@
                         <h5 class="card-title">กรุงเทพฯ -> ภูเก็ต</h5>
                         <p class="card-text">รถบัสปรับอากาศ ใช้เวลาเดินทาง 12 ชม.</p>
                         <div class="mt-auto d-flex justify-content-between align-items-center">
-                        <span class="price">฿890</span>
+                        <span class="price">B 890</span>
                         <a href="#" class="btn btn-primary">จองเลย</a>
                         </div>
                     </div>
@@ -174,7 +175,7 @@
                         <h5 class="card-title">กรุงเทพฯ -> พัทยา</h5>
                         <p class="card-text">รถบัสปรับอากาศ ใช้เวลาเดินทาง 2 ชม.</p>
                         <div class="mt-auto d-flex justify-content-between align-items-center">
-                        <span class="price">฿150</span>
+                        <span class="price">B 150</span>
                         <a href="#" class="btn btn-primary">จองเลย</a>
                         </div>
                     </div>

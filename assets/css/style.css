@@ -46,7 +46,7 @@ header {
 /* Banner */
 .banner {
     background-color: var(--text-color);
-    color: white;
+    /* color: white; */
     padding: 20px;
     font-weight: bold;
     position: relative;
@@ -55,9 +55,15 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    .banner-content {
+        color: var(--background-color);
+    }
+    .banner-content h1 {
+        color: white;
+    }
     .banner-content h2 {
         font-size: 1.3rem;
+        color: white;
     }
 
     & a {
@@ -192,6 +198,7 @@ main {
             gap: 30px; 
             justify-items: center; 
             align-items: center; 
+            padding-bottom: 35px;
         } 
         .logo-item img { 
             max-width: 120px; 
