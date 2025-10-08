@@ -133,180 +133,261 @@
 
     <main class="container">
         
-        <section class="route-popular">
-        <div class="card-title text-center mb-4">
-            <h1 class="card-header">เส้นทางยอดนิยมในประเทศไทย</h1>
-        </div>
-        <div class="container my-4">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+       <section class="popular-locations">
+            <div class="section-header">
+                <h1>จุดหมายปลายทางยอดนิยม</h1>
+            </div>
+            <div class="locations-grid">
+                <div class="card"><img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" alt="Denmark"><div class="label">Denmark</div></div>
+                <div class="card"><img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" alt="Belgium"><div class="label">Belgium</div></div>
+                <div class="card"><img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" alt="Mexico"><div class="label">Mexico</div></div>
+                <div class="card"><img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" alt="Mexico"><div class="label">Mexico</div></div>
+                <div class="card"><img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" alt="Indonesia"><div class="label">Indonesia</div></div>
+                <div class="card"><img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" alt="Romania"><div class="label">Romania</div></div>
+                <div class="card"><img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" alt="Romania"><div class="label">Romania</div></div>
+            </div>
+        </section>
+        <section class="flight-deals">
+            <div class="section-header ">
+                <h1>เส้นทางยอดนิยม</h1>
+            </div>
+            <div class="flight-section">
 
-                <div class="col">
-                    <div class="card h-100 route-card">
-                    <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" class="card-img-top" alt="Bangkok - Chiang Mai">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">กรุงเทพฯ -> เชียงใหม่</h5>
-                        <p class="card-text">รถบัส VIP 24 ที่นั่ง ใช้เวลาเดินทาง 9 ชม.</p>
-                        <div class="mt-auto d-flex justify-content-between align-items-center">
-                        <span class="price">B 750</span>
-                        <a href="#" class="btn btn-primary">จองเลย</a>
-                        </div>
+                <div class="flight-card">
+                <div class="flight-img">
+                    <span class="badge">Cheapest</span>
+                    <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92" alt="flight">
+                    <span class="rating">5</span>
+                </div>
+                <div class="flight-info">
+                    <div class="tags">
+                    <span class="tag">Toronto</span>
+                    <span class="arrow">-></span>
+                    <span class="tag">Bangkok</span>
                     </div>
-                    </div>  
+                    <h3>AstraFlight 215</h3>
+                    <p><span class="airline">IndiGo</span> • 1-stop at Frankfurt</p>
+                    <p class="date">Sep 04, 2024 - Sep 07, 2024</p>
+                    <div class="bottom">
+                    <span class="price">From $300</span>
+                    <span class="seats">27 seats left</span>
+                    </div>
+                </div>
                 </div>
 
-                <div class="col">
-                    <div class="card h-100 route-card">
-                    <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" class="card-img-top" alt="Bangkok - Phuket">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">กรุงเทพฯ -> ภูเก็ต</h5>
-                        <p class="card-text">รถบัสปรับอากาศ ใช้เวลาเดินทาง 12 ชม.</p>
-                        <div class="mt-auto d-flex justify-content-between align-items-center">
-                        <span class="price">B 890</span>
-                        <a href="#" class="btn btn-primary">จองเลย</a>
-                        </div>
+                <div class="flight-card">
+                <div class="flight-img">
+                    <span class="badge">Cheapest</span>
+                    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91" alt="flight">
+                    <span class="rating">4.7</span>
+                </div>
+                <div class="flight-info">
+                    <div class="tags">
+                    <span class="tag">Chicago</span>
+                    <span class="tag">Melbourne</span>
                     </div>
-                    </div>  
+                    <h3>Cloudrider 789</h3>
+                    <p><span class="airline">IndiGo</span> • 1-stop at Dallas</p>
+                    <p class="date">Sep 11, 2024 - Sep 13, 2024</p>
+                    <div class="bottom">
+                    <span class="price">From $550</span>
+                    <span class="seats">14 seats left</span>
+                    </div>
+                </div>
                 </div>
 
-                <div class="col">
-                    <div class="card h-100 route-card">
-                    <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" class="card-img-top" alt="Bangkok - Pattaya">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">กรุงเทพฯ -> พัทยา</h5>
-                        <p class="card-text">รถบัสปรับอากาศ ใช้เวลาเดินทาง 2 ชม.</p>
-                        <div class="mt-auto d-flex justify-content-between align-items-center">
-                        <span class="price">B 150</span>
-                        <a href="#" class="btn btn-primary">จองเลย</a>
-                        </div>
+                <div class="flight-card">
+                    <div class="flight-img">
+                    <span class="badge">Cheapest</span>
+                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" alt="flight">
+                    <span class="rating">4.5</span>
                     </div>
-                    </div>  
+                    <div class="flight-info">
+                    <div class="tags">
+                        <span class="tag">Miami</span>
+                        <span class="tag">Tokyo</span>
+                    </div>
+                    <h3>Aether Express 901</h3>
+                    <p><span class="airline">IndiGo</span> • 1-stop at Seoul</p>
+                    <p class="date">Sep 22, 2024 - Sep 24, 2024</p>
+                    <div class="bottom">
+                        <span class="price">From $450</span>
+                        <span class="seats">13 seats left</span>
+                    </div>
+                    </div>
+                </div>
+                <div class="flight-card">
+                    <div class="flight-img">
+                    <span class="badge">Cheapest</span>
+                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" alt="flight">
+                    <span class="rating">4.5</span>
+                    </div>
+                    <div class="flight-info">
+                    <div class="tags">
+                        <span class="tag">Miami</span>
+                        <span class="tag">Tokyo</span>
+                    </div>
+                    <h3>Aether Express 901</h3>
+                    <p><span class="airline">IndiGo</span> • 1-stop at Seoul</p>
+                    <p class="date">Sep 22, 2024 - Sep 24, 2024</p>
+                    <div class="bottom">
+                        <span class="price">From $450</span>
+                        <span class="seats">13 seats left</span>
+                    </div>
+                    </div>
                 </div>
 
             </div>
-        </div>
         </section>
 
-
-        <section class="new-promotion mt-5">
-            <div class="card-title text-center">
-                <h1 class="card-header">ข่าวสาร และโปรโมชั่นล่าสุด</h1>
+        <section class="route-popular">
+            <div class="section-header ">
+                <h1>เส้นทางยอดนิยม</h1>
             </div>
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
 
-                <div class="col">
-                    <div class="card h-100 promo-card">
-                    <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" 
-                        class="card-img-top" alt="โปรโมชั่นทะเล">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">เที่ยวทะเลราคาพิเศษ</h5>
-                        <p class="card-text">รับส่วนลด 20% สำหรับเส้นทาง กรุงเทพฯ -> ภูเก็ต และพัทยา ถึงสิ้นเดือนนี้เท่านั้น</p>
-                        <a href="#" class="btn btn-outline-primary mt-auto">อ่านต่อ</a>
+                    <div class="col">
+                        <div class="card h-100 route-card">
+                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" class="card-img-top" alt="Bangkok - Chiang Mai">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">กรุงเทพฯ -> เชียงใหม่</h5>
+                            <p class="card-text">รถบัส VIP 24 ที่นั่ง ใช้เวลาเดินทาง 9 ชม.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="price">B 750</span>
+                            <a href="#" class="btn btn-primary">จองเลย</a>
+                            </div>
+                        </div>
+                        </div>  
                     </div>
-                    </div>
-                </div>
 
-                <div class="col">
-                    <div class="card h-100 promo-card">
-                    <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" 
-                        class="card-img-top" alt="โปรโมชั่นเหนือ">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">เที่ยวเหนือสุดคุ้ม</h5>
-                        <p class="card-text">บัตรโดยสาร VIP กรุงเทพฯ -> เชียงใหม่ ลดพิเศษ พร้อมคูปองส่วนลดโรงแรม</p>
-                        <a href="#" class="btn btn-outline-primary mt-auto">อ่านต่อ</a>
+                    <div class="col">
+                        <div class="card h-100 route-card">
+                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" class="card-img-top" alt="Bangkok - Phuket">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">กรุงเทพฯ -> ภูเก็ต</h5>
+                            <p class="card-text">รถบัสปรับอากาศ ใช้เวลาเดินทาง 12 ชม.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="price">B 890</span>
+                            <a href="#" class="btn btn-primary">จองเลย</a>
+                            </div>
+                        </div>
+                        </div>  
                     </div>
-                    </div>
-                </div>
 
-                <div class="col">
-                    <div class="card h-100 promo-card">
-                    <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" 
-                        class="card-img-top" alt="โปรโมชั่นเที่ยวฟรี">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">โปรพิเศษ! เดินทางฟรี</h5>
-                        <p class="card-text">จองครบ 5 เที่ยว ฟรี 1 เที่ยว สำหรับเส้นทางในประเทศทุกเส้นทาง</p>
-                        <a href="#" class="btn btn-outline-primary mt-auto">อ่านต่อ</a>
+                    <div class="col">
+                        <div class="card h-100 route-card">
+                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" class="card-img-top" alt="Bangkok - Pattaya">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">กรุงเทพฯ -> พัทยา</h5>
+                            <p class="card-text">รถบัสปรับอากาศ ใช้เวลาเดินทาง 2 ชม.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="price">B 150</span>
+                            <a href="#" class="btn btn-primary">จองเลย</a>
+                            </div>
+                        </div>
+                        </div>  
                     </div>
+
+                    <div class="col">
+                        <div class="card h-100 route-card">
+                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" class="card-img-top" alt="Bangkok - Pattaya">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">กรุงเทพฯ -> พัทยา</h5>
+                            <p class="card-text">รถบัสปรับอากาศ ใช้เวลาเดินทาง 2 ชม.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="price">B 150</span>
+                            <a href="#" class="btn btn-primary">จองเลย</a>
+                            </div>
+                        </div>
+                        </div>  
                     </div>
+
+                    <div class="col">
+                        <div class="card h-100 route-card">
+                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" class="card-img-top" alt="Bangkok - Pattaya">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">กรุงเทพฯ -> พัทยา</h5>
+                            <p class="card-text">รถบัสปรับอากาศ ใช้เวลาเดินทาง 2 ชม.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="price">B 150</span>
+                            <a href="#" class="btn btn-primary">จองเลย</a>
+                            </div>
+                        </div>
+                        </div>  
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 route-card">
+                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" class="card-img-top" alt="Bangkok - Pattaya">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">กรุงเทพฯ -> พัทยา</h5>
+                            <p class="card-text">รถบัสปรับอากาศ ใช้เวลาเดินทาง 2 ชม.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="price">B 150</span>
+                            <a href="#" class="btn btn-primary">จองเลย</a>
+                            </div>
+                        </div>
+                        </div>  
+                    </div>
+
                 </div>
+                
+            </div>
+        </section>
+
+        <section class="new-promotion">
+            <div class="section-header">
+                <h1>Promotion / News</h1>
+            </div>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                    <div class="col">
+                        <div class="card h-100 promo-card">
+                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" 
+                            class="card-img-top" alt="โปรโมชั่นทะเล">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">เที่ยวทะเลราคาพิเศษ</h5>
+                            <p class="card-text">รับส่วนลด 20% สำหรับเส้นทาง กรุงเทพฯ -> ภูเก็ต และพัทยา ถึงสิ้นเดือนนี้เท่านั้น</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">อ่านต่อ</a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 promo-card">
+                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" 
+                            class="card-img-top" alt="โปรโมชั่นเหนือ">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">เที่ยวเหนือสุดคุ้ม</h5>
+                            <p class="card-text">บัตรโดยสาร VIP กรุงเทพฯ -> เชียงใหม่ ลดพิเศษ พร้อมคูปองส่วนลดโรงแรม</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">อ่านต่อ</a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 promo-card">
+                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" 
+                            class="card-img-top" alt="โปรโมชั่นเที่ยวฟรี">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">โปรพิเศษ! เดินทางฟรี</h5>
+                            <p class="card-text">จองครบ 5 เที่ยว ฟรี 1 เที่ยว สำหรับเส้นทางในประเทศทุกเส้นทาง</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">อ่านต่อ</a>
+                        </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
         </section>
 
-        <section class="bus-providers mt-5">
-            <div class="">
-                <div class="section-header">
-                    <h2>ผู้ให้บริการรถทัวร์</h2>
-                    <a href="#" class="more-link">เพิ่มเติม</a>
-                </div> <div class="logo-grid">
-                    <div class="logo-item">
-                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" alt="เพชรประเสริฐ">
-                    </div> <div class="logo-item">
-                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" alt="โบยทัวร์">
-                    </div> <div class="logo-item">
-                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" alt="พิษณุโลกยานยนต์">
-                    </div> <div class="logo-item">
-                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" alt="อิ๊กไนท์">
-                    </div>
-                    <div class="logo-item">
-                        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1688589767/jfgyhr7ouo0nhqvkjtua.jpg" alt="นครชัยแอร์">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="destination-list mt-5">
-            <div class="">
-                <div class="card-title text-center">
-                    <h1 class="card-header">จุดหมายปลายทาง</h1>
-                </div>
-                <div class="row ps-3 g-3">
-
-                <div class="col">
-                    <p>รถทัวร์ กรุงเทพฯ กระบี่</p>
-                    <p>รถทัวร์ กรุงเทพฯ ขอนแก่น</p>
-                    <p>รถทัวร์ กรุงเทพฯ นครราชสีมา</p>
-                    <p>รถทัวร์ กรุงเทพฯ ยะลา</p>
-                    <p>รถทัวร์ กรุงเทพฯ สุราษฎร์ธานี</p>
-                    <p>รถทัวร์ กรุงเทพฯ อุดรธานี</p>
-                </div>
-
-                <div class="col">
-                    <p>รถทัวร์ กรุงเทพฯ ภูเก็ต</p>
-                    <p>รถทัวร์ กรุงเทพฯ ชุมพร</p>
-                    <p>รถทัวร์ กรุงเทพฯ ประจวบคีรีขันธ์</p>
-                    <p>รถทัวร์ กรุงเทพฯ ระนอง</p>
-                    <p>รถทัวร์ กรุงเทพฯ สุโขทัย</p>
-                    <p>รถทัวร์ กรุงเทพฯ เกาะสมุย</p>
-                </div>
-
-                <div class="col">
-                    <p>รถทัวร์ กรุงเทพฯ ตราด</p>
-                    <p>รถทัวร์ กรุงเทพฯ ตรัง</p>
-                    <p>รถทัวร์ กรุงเทพฯ ศรีสะเกษ</p>
-                    <p>รถทัวร์ กรุงเทพฯ หาดใหญ่</p>
-                    <p>รถทัวร์ กรุงเทพฯ เชียงราย</p>
-                    <p>รถทัวร์ กรุงเทพฯ ลำปาง</p>
-                </div>
-
-                <div class="col">
-                    <p>รถทัวร์ กรุงเทพฯ กาญจนบุรี</p>
-                    <p>รถทัวร์ กรุงเทพฯ นครสวรรค์</p>
-                    <p>รถทัวร์ กรุงเทพฯ สงขลา</p>
-                    <p>รถทัวร์ กรุงเทพฯ อุบลราชธานี</p>
-                    <p>รถทัวร์ กรุงเทพฯ เชียงใหม่</p>
-                    <p>รถทัวร์ กรุงเทพฯ แม่ฮ่องสอน</p>
-                </div>
-
-                </div>
-            </div>
-        </section>
 
 
     </main>
 
-<footer class="site-footer bg-dark text-light pt-5 pb-4 mt-5">
+<footer class="site-footer bg-dark text-light mt-5">
     <div class="container">
         <div class="row">
 
