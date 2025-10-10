@@ -1,0 +1,193 @@
+
+
+
+  /* backup */
+  .route-popular {
+      padding: 0 20px 50px 20px;
+
+      .route-card {
+          border: none;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+          border-radius: var(--border-radius-card);
+          overflow: hidden;
+          transition: transform .2s ease, box-shadow .2s ease;
+      }
+
+      .route-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+      }
+
+      .route-card img {
+          height: 180px;
+          object-fit: cover;
+      }
+
+      .route-card .price {
+          font-size: 18px;
+          font-weight: bold;
+          color: #0ea5a4;
+          background: #e6f7f6;
+          padding: 6px 12px;
+          border-radius: 8px;
+      }
+
+  }
+
+
+
+  .new-promotion {
+      text-align: center;
+      font-family: sans-serif;
+      padding: 30px;
+      display: block;
+      background-color: var(--theame-color-section);
+      border-radius: var(--border-radius-card);
+
+      .content {
+          max-width: 1320px;
+          margin: 0 auto;
+      }
+      .promo-card {
+          border: none;
+          border-radius: var(--border-radius-card);
+          overflow: hidden;
+          box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+          transition: transform .2s ease, box-shadow .2s ease;
+      }
+
+      .promo-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+      }
+
+      .promo-card img {
+          height: 200px;
+          object-fit: cover;
+      }
+
+      .promo-card .card-title {
+          font-weight: 600;
+          font-size: 18px;
+          margin-bottom: 8px;
+      }
+
+      .promo-card .card-text {
+          color: #555;
+          font-size: 14px;
+          flex-grow: 1;
+      }
+
+      .promo-card .btn {
+          font-weight: 500;
+          border-radius: 10px;
+      }
+
+  }
+  .popular-locations {
+    text-align: center;
+    font-family: sans-serif;
+    padding: 30px;
+    background-color:var(--theame-color-section);
+    border-radius: var(--border-radius-card);
+
+    .locations-grid {
+      display: grid;
+      
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .locations-grid .card:nth-child(1) {
+      grid-column: span 1; 
+    }
+    .locations-grid .card:nth-child(2),
+    .locations-grid .card:nth-child(3) {
+      grid-column: span 1; 
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--border-radius-card);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .label {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background-color: rgba(255,255,255,0.8);
+      padding: 5px 12px;
+      border-radius: var(--border-radius-card);
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    .label-end {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: rgba(255,255,255,0.8);
+      padding: 5px 12px;
+      border-radius: var(--border-radius-card);
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 992px) {
+      .locations-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .locations-grid .card:nth-child(1) {
+        grid-column: span 3; 
+      }
+    }
+
+    @media (max-width: 600px) {
+      .locations-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .locations-grid .card:nth-child(1) {
+        grid-column: span 2; /* กิน 2 ช่องในมือถือแนวนอน */
+      }
+    }
+
+    @media (max-width: 400px) {
+      .locations-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .locations-grid .card:nth-child(1) {
+        grid-column: span 1;
+      }
+    }
+  }
+/* 
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+} */
+
