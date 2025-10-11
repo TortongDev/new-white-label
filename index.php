@@ -22,6 +22,16 @@
 </head>
 
 <body>
+    <?php
+        $lang = (isset($_GET['lang']) && $_GET['lang'] === "en_US") ? "en_US" : "th_TH";
+
+        // data
+        $popular_desctination = file_get_contents('./data/popular-destinations.json');
+        $popular_destination = json_decode($popular_desctination, true);
+
+        $our_provider = file_get_contents('./data/our-providers.json');
+        $our_provider = json_decode($our_provider, true);
+    ?>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
@@ -50,9 +60,9 @@
 
                         <li class="nav-item d-none d-md-block">&nbsp;</li>
                         <li class="nav-item d-flex justify-content-center align-items-center me-3 ms-3 lang">
-                            <a class="nav-link" href="#"><img src="./assets/images/lang-th.png" alt="logo lang th"> TH</a>
+                            <a class="nav-link" href="#"><img src="./assets/images/lang/lang-th.png" class="me-1" alt="logo lang th"> TH <i class="bi bi-check-lg ms-1 <?=($lang == 'th_TH') ? "d-block" : "d-none" ?>"></i></a>
                             <a class="nav-link d-block d-md-none" href="#">&nbsp;</a>
-                            <a class="nav-link" href="#"><img src="./assets/images/lang-us.png" alt="logo lang en"> EN</a>
+                            <a class="nav-link" href="#"><img src="./assets/images/lang/lang-us.png" class="me-1" alt="logo lang en"> EN <i class="bi bi-check-lg ms-1 <?=($lang == 'en_US') ? "d-block" : "d-none" ?>"></i></a>
                         </li>
 
                     </ul>
@@ -67,89 +77,7 @@
             <h2>Plan your journey with ease browse schedules compare prices and book your ticket instantly</h2>
         </div>
         <div class="form-search container p-4 rounded ">
-             <div id="busx-search-form" data-url="https://booking.lignitetour.com" data-appkey="c79a84e0cf1d68d44d98e18751ab60e8" data-locale="th_TH" data-color="#9B111E" data-btn="Booking">
-
-            </div>
-
-            <!-- <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="one-way-tab" data-bs-toggle="tab" data-bs-target="#one-way"
-                        type="button" role="tab" aria-controls="one-way" aria-selected="true">ไป</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="round-trip-tab" data-bs-toggle="tab" data-bs-target="#round-trip"
-                        type="button" role="tab" aria-controls="round-trip" aria-selected="false">ไปและกลับ</button>
-                </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="one-way" role="tabpanel" aria-labelledby="one-way-tab">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="from" class="form-label">จาก</label>
-                                <input type="text" class="form-control form-control-lg" id="from" placeholder="ต้นทาง">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="to" class="form-label">ไปยัง</label>
-                                <input type="text" class="form-control form-control-lg" id="to" placeholder="ปลายทาง">
-                            </div>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-md-6 pt-3">
-                                <label for="departure-date" class="form-label">วันที่ออกเดินทาง</label>
-                                <input type="date" class="form-control form-control-lg" id="departure-date">
-                            </div>
-                            <div class="col-md-3 pt-3">
-                                <label for="departure-date" class="form-label">จำนวนผู้โดยสาร</label>
-                                <input type="number" name="" id="" class="form-control form-control-lg"
-                                    placeholder="ผู้ใหญ่">
-                            </div>
-                            <div class="col-md-3 pt-3">
-                                <label for="departure-date" class="form-label">&nbsp;</label>
-                                <div class="d-grid gap-3">
-                                    <button type="button" class="btn btn-lg btn-danger btn-block">จองตั๋ว</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="tab-pane fade" id="round-trip" role="tabpanel" aria-labelledby="round-trip-tab">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="from" class="form-label">จาก</label>
-                                <input type="text" class="form-control form-control-lg" id="from" placeholder="ต้นทาง">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="to" class="form-label">ไปยัง</label>
-                                <input type="text" class="form-control form-control-lg" id="to" placeholder="ปลายทาง">
-                            </div>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-md-3 pt-3">
-                                <label for="departure-date" class="form-label">วันที่ออกเดินทาง</label>
-                                <input type="date" class="form-control form-control-lg" id="departure-date">
-                            </div>
-                            <div class="col-md-3 pt-3">
-                                <label for="departure-date" class="form-label">วันที่กลับ</label>
-                                <input type="date" class="form-control form-control-lg" id="departure-date">
-                            </div>
-                            <div class="col-md-3 pt-3">
-                                <label for="departure-date" class="form-label">จำนวนผู้โดยสาร</label>
-                                <input type="number" name="" id="" class="form-control form-control-lg"
-                                    placeholder="ผู้ใหญ่">
-                            </div>
-                            <div class="col-md-3 pt-3">
-                                <label for="departure-date" class="form-label">&nbsp;</label>
-                                <div class="d-grid gap-3">
-                                    <button type="button" class="btn btn-lg btn-danger btn-block">จองตั๋ว</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div> -->
-
+             <div id="busx-search-form" data-url="https://booking.lignitetour.com" data-appkey="c79a84e0cf1d68d44d98e18751ab60e8" data-locale="th_TH" data-color="#9B111E" data-btn="Booking"></div>
         </div>
     </section>
 
@@ -160,29 +88,13 @@
                 <h1>Popular Destinations</h1>
             </div>
             <div class="destinations-grid">
-                <div class="destination-card">
-                <img src="./assets/images/popular-destinations/phuket-thailand.webp" alt="Phuket Thailand">
-                <h3>Phuket</h3>
-                <p>Phuket is Thailand’s largest tourist island, renowned for its beautiful beaches, clear waters, local culture, and fresh seafood.</p>
-                </div>
-
-                <div class="destination-card">
-                <img src="./assets/images/popular-destinations/trat-thailand.webp" alt="Trat Thailand">
-                <h3>Trat</h3>
-                <p>Trat is a province in eastern Thailand, known for its beautiful islands, clear waters, and vibrant marine life.</p>
-                </div>
-
-                <div class="destination-card">
-                <img src="./assets/images/popular-destinations/chiangmai-thailand.webp" alt="Chiang Mai Thailandas">
-                <h3>Chiang Mai</h3>
-                <p>Chiang Mai is known for its stunning temples, vibrant night markets, and beautiful mountain scenery.</p>
-                </div>
-
-                <div class="destination-card">
-                <img src="./assets/images/popular-destinations/kanchanaburi-thailand.webp" alt="Kanchanaburi Thailand">
-                <h3>Kanchanaburi</h3>
-                <p>Kanchanaburi is a province in western Thailand, known for its stunning natural beauty, waterfalls, and historical sites.</p>
-                </div>
+                <?php foreach ($popular_destination as $row_destination) { ?>
+                    <div class="destination-card">
+                        <img src="./assets/images/popular-destinations/<?=$row_destination['image'];?>" alt="Phuket Thailand">
+                        <h3><?=$row_destination['province'];?></h3>
+                        <p><?=$row_destination['description'];?></p>
+                    </div>
+                <?php } ?>
             </div>
         </section>
 
@@ -223,41 +135,21 @@
                 <h1>Our Providers</h1>
             </div>
             <div class="provider-grid no-splide" aria-label="Our Providers">
-                <div class="provider-card">
-                    <img src="./assets/images/our-providers/nakhonchaiair.webp" alt="nakhonchaiair provider">
-                </div>
-                <div class="provider-card">
-                    <img src="./assets/images/our-providers/Logo_of_The_Transport_Company_Limited.svg.webp" alt="tcl provider">
-                </div>
-                <div class="provider-card">
-                    <img src="./assets/images/our-providers/lignitetour.webp" alt="lignite tour providers">
-                </div>
-                <div class="provider-card">
-                    <img src="./assets/images/our-providers/yellow-bus.webp" alt="yellow bus provider">
-                </div>
-                <div class="provider-card">
-                    <img src="./assets/images/our-providers/kanexpress.webp" alt="Provider 1">
-                </div>
+                 <?php foreach($our_provider as $row_provider) { ?>
+                    <div class="provider-card splide__slide">
+                        <img src="./assets/images/our-providers/<?=$row_provider['image']?>" alt="<?=$row_provider['provider']?>">
+                    </div>
+                <?php } ?>
             </div>
 
             <div class="provider-grid splide" aria-label="Our Providers">
                 <div class="splide__track">
                     <div class="splide__list">
+                        <?php foreach($our_provider as $row_provider) { ?>
                         <div class="provider-card splide__slide">
-                            <img src="./assets/images/our-providers/nakhonchaiair.webp" alt="nakhonchaiair provider">
+                            <img src="./assets/images/our-providers/<?=$row_provider['image']?>" alt="<?=$row_provider['provider']?>">
                         </div>
-                        <div class="provider-card splide__slide">
-                            <img src="./assets/images/our-providers/Logo_of_The_Transport_Company_Limited.svg.webp" alt="tcl provider">
-                        </div>
-                        <div class="provider-card splide__slide">
-                            <img src="./assets/images/our-providers/lignitetour.webp" alt="lignite tour providers">
-                        </div>
-                        <div class="provider-card splide__slide">
-                            <img src="./assets/images/our-providers/yellow-bus.webp" alt="yellow bus provider">
-                        </div>
-                        <div class="provider-card splide__slide">
-                            <img src="./assets/images/our-providers/kanexpress.webp" alt="Provider 1">
-                        </div>
+                        <?php } ?>
                         
                     </div>
                 </div>

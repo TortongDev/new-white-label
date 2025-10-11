@@ -91,6 +91,11 @@ header {
       }
     } */
 
+    & a.nav-link {
+      display: flex;
+
+    }
+
     
   }
 }
@@ -129,67 +134,71 @@ header {
 .modal-box-content {
   display: none;
 }
+
 /* Banner */
 .banner {
   border-radius: 0;
-    background-image: url('../images/banner/background-1.jpg');
-    background-size: cover;
-    background-position: 10% -380px !important;
-    backdrop-filter: brightness(0.7);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    /* background-color: var(--text-color); */
-    /* color: white; */
-    padding: 20px;
-    font-weight: bold;
-    position: relative;
-    top: 56px;
-    width: 100%;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .banner-content {
+  background-image: url('../images/banner/background-2.webp');
+  background-size: cover;
+  background-position: 10% -380px !important;
+  backdrop-filter: brightness(0.7);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+  font-weight: bold;
+  position: relative;
+  top: 56px;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+ 
+  @media (max-width: 1400px){
+    background-position: center !important;
+  }
+  
+  .banner-content {
     color: var(--background-color);
-      .box-centent  {
+    position: absolute;
+    top: 30px;
+  }
+
+  .form-search {
+    position: absolute;
+    top: 210px;
+    display: inline-block;
+
+    /* form search from busx */
+    .container-search {
+
+      .box-centent {
+        width: 100%;
         padding: 30px;
-        border-radius: 16px;
-      }
-    
-      .container-search {
-          .box-centent {
-              width: 100%;
-              padding: 20px;
-              border-radius: 5px;
-              padding: 35px;
-              border-radius: var(--border-radius-card);
-          }
+        border-radius: var(--border-radius-card);
       }
     }
-    .banner-content h1 {
-        color: var(--background-color);
 
-    }
-    .banner-content h2 {
-        font-size: 1.3rem;
-        color: var(--background-color);
-    }
+  }
+  .banner-content h1 {
+      color: var(--background-color);
 
-    & a {
-        color: var(--theame-color);
-        text-decoration: none;
-        font-weight: bold;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+  }
+  .banner-content h2 {
+      font-size: 1.3rem;
+      color: var(--background-color);
+  }
 
-    .form-search {
-        position: absolute;
-        top: 200px;
-        display: inline-block;
+  & a {
+      color: var(--theame-color);
+      text-decoration: none;
+      font-weight: bold;
+      &:hover {
+          text-decoration: underline;
+      }
+  }
 
-    }
 }
 main {
   margin: 100px auto;
