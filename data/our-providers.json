@@ -1,41 +1,21 @@
 [
     {
         "provider": "Nakhonchaiair Provider",
-        "image": "nca.jpeg"
-    },
-    {
-        "provider": "The Transport Company Limited Provider",
-        "image": "Logo_of_The_Transport_Company_Limited.svg.webp"
-    },
-    {
-        "provider": "Lignitetour Provider",
-        "image": "lignitetour.webp"
-    },
-    {
-        "provider": "Yellow Bus Provider",
-        "image": "yellow-bus.webp"
-    },
-    {
-        "provider": "Kanechanaburi express Provider",
-        "image": "kanexpress.webp"
+        "image": "nakhonchaiair.webp"
     },
      {
-        "provider": "Nakhonchaiair Provider",
-        "image": "nca.jpeg"
-    },
-    {
         "provider": "The Transport Company Limited Provider",
         "image": "Logo_of_The_Transport_Company_Limited.svg.webp"
     },
-    {
+     {
         "provider": "Lignitetour Provider",
         "image": "lignitetour.webp"
     },
-    {
+     {
         "provider": "Yellow Bus Provider",
         "image": "yellow-bus.webp"
     },
-    {
+     {
         "provider": "Kanechanaburi express Provider",
         "image": "kanexpress.webp"
     }

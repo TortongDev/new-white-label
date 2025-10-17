@@ -25,7 +25,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="./assets/images/logo/logo-new-2.webp" alt="logo"></a>
+                <a class="navbar-brand" href="#"><img src="./assets/images/logo/logo-new.png" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -64,19 +64,17 @@
     <section class="banner">
         <div class="banner-content text-center mt-5">
             <h1>Alpha Online Bus Booking</h1>
-            <h2>Check bus schedules, low prices, book online 24 Hours</h2>
+            <h2>Plan your journey with ease browse schedules compare prices and book your ticket instantly</h2>
         </div>
         <div class="form-search container p-4 rounded ">
-
              <div id="busx-search-form" data-url="https://booking.lignitetour.com" data-appkey="c79a84e0cf1d68d44d98e18751ab60e8" data-locale="th_TH" data-color="#9B111E" data-btn="Booking"></div>
-
         </div>
     </section>
 
     <main class="booking">
 
         <section class="popular-destinations">
-            <div class="card-title">
+            <div class="section-header">
                 <h1>Popular Destinations</h1>
             </div>
             <div class="destinations-grid">
@@ -106,8 +104,8 @@
             </div>
         </section>
 
-        <section class="why-choose">
-          <div class="card-title">
+        <section class="why-choose mt-4">
+          <div class="section-header">
                 <h1>Why Choose Alpha</h1>
             </div>
         <div class="features-grid">
@@ -138,8 +136,8 @@
             </div>
         </div>
         </section>
-        <section class="provider-section">
-            <div class="card-title">
+        <section class="provider-section mt-5">
+            <div class="section-header">
                 <h1>Our Providers</h1>
             </div>
             <div class="provider-grid no-splide" aria-label="Our Providers">
@@ -193,10 +191,10 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <h5 class="mb-3">Alpha</h5>
-                    <p>Book bus tickets online across Thailand easy, safe, and convenient Find routes and reserve your seat on all major travel lines nationwide.</p>
+                    <p>Web Booking is very good</p>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <h5 class="mb-3">Main Menu</h5>
+                    <h6 class="mb-3">Main Menu</h6>
                     <ul class="list-unstyled">
                         <li><a href="#" class="footer-link">Home</a></li>
                         <li><a href="#" class="footer-link">Popular routes</a></li>
@@ -205,7 +203,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <h5 class="mb-3">Contact us</h5>
+                    <h6 class="mb-3">Contact us</h6>
                     <p class="mb-1">123 bangkok</p>
                     <p class="mb-1"> 022222222</p>
                     <p class="mb-3">xx@mail.com</p>
