@@ -5,6 +5,8 @@
     --fawn: #D3AF85;
     --fawnRGB: 211, 175, 133;
     --beer: #F4B315;
+    --beerSoft: #ffe7ad;
+    
     --beerRGB: 244, 179, 21;
     --gamboge: #E59312;
 
@@ -98,17 +100,24 @@ header {
     }
   }
   .navbar-nav {
+    & .active {
+      color: var(--beer) !important;
+      font-weight: bold;
+      text-decoration: solid;
+      text-wrap-style: balance;
+
+    }
     & a {
         color: var(--text-link) !important;
         text-decoration: none;
 
         &:hover {
           transition: var(--transition);
-          color: var(--beer) !important;
+          color: var(--beerSoft) !important;
         }
     }
       & a.lang {
-          color: var(--beer) !important;
+          /* color: var(--beerSoft) !important; */
       }
     .nav-item {
       img {
@@ -183,7 +192,7 @@ header {
       }
       .box-centent {
         width: 1180PX;
-        padding: 35px;
+        padding: 40px;
         border-radius: var(--border-radius-card);
       }
     }
@@ -268,7 +277,7 @@ main {
 
             }
             & button.book-now {
-              background-color: var(--beer);
+              background-color: var(--beerSoft);
               border-radius: var(--border-radius-card);
               color: var(--rangoon) !important;
 
@@ -470,7 +479,7 @@ footer {
         text-decoration: none;
     }
     .footer-link:hover {
-        color: var(--beer);
+        color: var(--beerSoft);
         transition: var(--transition);
     }
 
@@ -478,7 +487,7 @@ footer {
         font-size: 18px;
     }
     .social-icon:hover {
-        color: var(--beer);
+        color: var(--beerSoft);
     }
 
 }

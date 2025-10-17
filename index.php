@@ -172,7 +172,7 @@
                     <p>Book bus tickets online across Thailand easy, safe, and convenient Find routes and reserve your seat on all major travel lines nationwide.</p>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <h5 class="mb-3">Main Menu</h5>
+                    <h5 class="mb-3">Quit Menu</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="footer-link">Home</a></li>
                         <li><a href="#" class="footer-link">Popular routes</a></li>
