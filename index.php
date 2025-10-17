@@ -22,10 +22,20 @@
 </head>
 
 <body>
+    <?php
+        $lang = (isset($_GET['lang']) && $_GET['lang'] === "en_US") ? "en_US" : "th_TH";
+
+        // data
+        $popular_desctination = file_get_contents('./data/popular-destinations.json');
+        $popular_destination = json_decode($popular_desctination, true);
+
+        $our_provider = file_get_contents('./data/our-providers.json');
+        $our_provider = json_decode($our_provider, true);
+    ?>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="./assets/images/logo/logo-new.png" alt="logo"></a>
+                <a class="navbar-brand" href="#"><img src="./assets/images/logo/logo-new-2.webp" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -50,9 +60,9 @@
 
                         <li class="nav-item d-none d-md-block">&nbsp;</li>
                         <li class="nav-item d-flex justify-content-center align-items-center me-3 ms-3 lang">
-                            <a class="nav-link" href="#"><img src="./assets/images/lang-th.png" alt="logo lang th"> TH</a>
+                            <a class="nav-link" href="#"><img src="./assets/images/lang/lang-th.png" class="me-1" alt="logo lang th"> TH <i class="bi bi-check-lg ms-1 <?=($lang == 'th_TH') ? "d-block" : "d-none" ?>"></i></a>
                             <a class="nav-link d-block d-md-none" href="#">&nbsp;</a>
-                            <a class="nav-link" href="#"><img src="./assets/images/lang-us.png" alt="logo lang en"> EN</a>
+                            <a class="nav-link" href="#"><img src="./assets/images/lang/lang-us.png" class="me-1" alt="logo lang en"> EN <i class="bi bi-check-lg ms-1 <?=($lang == 'en_US') ? "d-block" : "d-none" ?>"></i></a>
                         </li>
 
                     </ul>
@@ -64,54 +74,43 @@
     <section class="banner">
         <div class="banner-content text-center mt-5">
             <h1>Alpha Online Bus Booking</h1>
-            <h2>Plan your journey with ease browse schedules compare prices and book your ticket instantly</h2>
+            <h2>Check bus schedules, low prices, book online 24 Hours</h2>
         </div>
         <div class="form-search container p-4 rounded ">
-             <div id="busx-search-form" data-url="https://booking.lignitetour.com" data-appkey="c79a84e0cf1d68d44d98e18751ab60e8" data-locale="th_TH" data-color="#9B111E" data-btn="Booking"></div>
+             <div id="busx-search-form" data-url="https://booking.lignitetour.com" data-appkey="c79a84e0cf1d68d44d98e18751ab60e8" data-locale="th_TH" data-color="#F4B315" data-btn="Booking"></div>
         </div>
     </section>
 
     <main class="booking">
 
         <section class="popular-destinations">
-            <div class="section-header">
+            <div class="card-title">
                 <h1>Popular Destinations</h1>
             </div>
             <div class="destinations-grid">
-                <div class="destination-card">
-                <img src="./assets/images/popular-destinations/phuket-thailand.webp" alt="Phuket Thailand">
-                <h3>Phuket</h3>
-                <p>Phuket is Thailand’s largest tourist island, renowned for its beautiful beaches, clear waters, local culture, and fresh seafood.</p>
-                </div>
-
-                <div class="destination-card">
-                <img src="./assets/images/popular-destinations/trat-thailand.webp" alt="Trat Thailand">
-                <h3>Trat</h3>
-                <p>Trat is a province in eastern Thailand, known for its beautiful islands, clear waters, and vibrant marine life.</p>
-                </div>
-
-                <div class="destination-card">
-                <img src="./assets/images/popular-destinations/chiangmai-thailand.webp" alt="Chiang Mai Thailandas">
-                <h3>Chiang Mai</h3>
-                <p>Chiang Mai is known for its stunning temples, vibrant night markets, and beautiful mountain scenery.</p>
-                </div>
-
-                <div class="destination-card">
-                <img src="./assets/images/popular-destinations/kanchanaburi-thailand.webp" alt="Kanchanaburi Thailand">
-                <h3>Kanchanaburi</h3>
-                <p>Kanchanaburi is a province in western Thailand, known for its stunning natural beauty, waterfalls, and historical sites.</p>
-                </div>
+                <?php foreach ($popular_destination as $row_destination) { ?>
+                    <div class="destination-card">
+                        <img src="./assets/images/popular-destinations/<?=$row_destination['image'];?>" alt="Phuket Thailand">
+                        <div class="card-content">
+                            <h3><?=$row_destination['province_from'];?> <i class="bi bi-arrow-right"></i> <?=$row_destination['province_to'];?></h3>
+                            <p><?=$row_destination['description'];?></p>
+                            <div class="d-grid">
+                                <button class="btn book-now">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
         </section>
 
-        <section class="why-choose mt-4">
-          <div class="section-header">
+        <section class="why-choose">
+          <div class="card-title">
                 <h1>Why Choose Alpha</h1>
             </div>
         <div class="features-grid">
             <div class="feature-card">
             <div class="icon">
-                <img src="./assets/images/why-choose/bus-front.webp" alt="Bus Front" width="35">
+                <img src="./assets/images/why-choose/bus.svg" alt="Bus Front" width="35">
             </div>
             <h3>Comfortable Buses</h3>
             <p>Travel in comfort with our modern and well-maintained buses.</p>
@@ -119,7 +118,7 @@
 
             <div class="feature-card">
             <div class="icon">
-                <img src="./assets/images/why-choose/clock.webp" alt="Clock" width="35">
+                <img src="./assets/images/why-choose/time.svg" alt="Clock" width="35">
 
             </div>
             <h3>Flexible Schedules</h3>
@@ -128,7 +127,7 @@
 
             <div class="feature-card">
             <div class="icon">
-                <img src="./assets/images/why-choose/price.webp" alt="Price" width="35">
+                <img src="./assets/images/why-choose/currency.svg" alt="Price" width="35">
 
             </div>
             <h3>Affordable Prices</h3>
@@ -136,46 +135,26 @@
             </div>
         </div>
         </section>
-        <section class="provider-section mt-5">
-            <div class="section-header">
+        <section class="provider-section">
+            <div class="card-title">
                 <h1>Our Providers</h1>
             </div>
             <div class="provider-grid no-splide" aria-label="Our Providers">
-                <div class="provider-card">
-                    <img src="./assets/images/our-providers/nakhonchaiair.webp" alt="nakhonchaiair provider">
-                </div>
-                <div class="provider-card">
-                    <img src="./assets/images/our-providers/Logo_of_The_Transport_Company_Limited.svg.webp" alt="tcl provider">
-                </div>
-                <div class="provider-card">
-                    <img src="./assets/images/our-providers/lignitetour.webp" alt="lignite tour providers">
-                </div>
-                <div class="provider-card">
-                    <img src="./assets/images/our-providers/yellow-bus.webp" alt="yellow bus provider">
-                </div>
-                <div class="provider-card">
-                    <img src="./assets/images/our-providers/kanexpress.webp" alt="Provider 1">
-                </div>
+                 <?php foreach($our_provider as $row_provider) { ?>
+                    <div class="provider-card splide__slide">
+                        <img src="./assets/images/our-providers/<?=$row_provider['image']?>" alt="<?=$row_provider['provider']?>">
+                    </div>
+                <?php } ?>
             </div>
 
             <div class="provider-grid splide" aria-label="Our Providers">
                 <div class="splide__track">
                     <div class="splide__list">
+                        <?php foreach($our_provider as $row_provider) { ?>
                         <div class="provider-card splide__slide">
-                            <img src="./assets/images/our-providers/nakhonchaiair.webp" alt="nakhonchaiair provider">
+                            <img src="./assets/images/our-providers/<?=$row_provider['image']?>" alt="<?=$row_provider['provider']?>">
                         </div>
-                        <div class="provider-card splide__slide">
-                            <img src="./assets/images/our-providers/Logo_of_The_Transport_Company_Limited.svg.webp" alt="tcl provider">
-                        </div>
-                        <div class="provider-card splide__slide">
-                            <img src="./assets/images/our-providers/lignitetour.webp" alt="lignite tour providers">
-                        </div>
-                        <div class="provider-card splide__slide">
-                            <img src="./assets/images/our-providers/yellow-bus.webp" alt="yellow bus provider">
-                        </div>
-                        <div class="provider-card splide__slide">
-                            <img src="./assets/images/our-providers/kanexpress.webp" alt="Provider 1">
-                        </div>
+                        <?php } ?>
                         
                     </div>
                 </div>
@@ -191,10 +170,10 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <h5 class="mb-3">Alpha</h5>
-                    <p>Web Booking is very good</p>
+                    <p>Book bus tickets online across Thailand easy, safe, and convenient Find routes and reserve your seat on all major travel lines nationwide.</p>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <h6 class="mb-3">Main Menu</h6>
+                    <h5 class="mb-3">Main Menu</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="footer-link">Home</a></li>
                         <li><a href="#" class="footer-link">Popular routes</a></li>
@@ -203,7 +182,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <h6 class="mb-3">Contact us</h6>
+                    <h5 class="mb-3">Contact us</h5>
                     <p class="mb-1">123 bangkok</p>
                     <p class="mb-1"> 022222222</p>
                     <p class="mb-3">xx@mail.com</p>
