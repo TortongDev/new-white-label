@@ -67,93 +67,9 @@
             <h2>Check bus schedules, low prices, book online 24 Hours</h2>
         </div>
         <div class="form-search container p-4 rounded ">
-<<<<<<< HEAD
-             <div id="busx-search-form" data-url="https://booking.lignitetour.com" data-appkey="c79a84e0cf1d68d44d98e18751ab60e8" data-locale="th_TH" data-color="#F4B315" data-btn="Booking"></div>
-=======
-             <div id="busx-search-form" data-url="https://booking.lignitetour.com" data-appkey="c79a84e0cf1d68d44d98e18751ab60e8" data-locale="th_TH" data-color="#9B111E" data-btn="Booking">
 
-            </div>
+             <div id="busx-search-form" data-url="https://booking.lignitetour.com" data-appkey="c79a84e0cf1d68d44d98e18751ab60e8" data-locale="th_TH" data-color="#9B111E" data-btn="Booking"></div>
 
-            <!-- <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="one-way-tab" data-bs-toggle="tab" data-bs-target="#one-way"
-                        type="button" role="tab" aria-controls="one-way" aria-selected="true">ไป</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="round-trip-tab" data-bs-toggle="tab" data-bs-target="#round-trip"
-                        type="button" role="tab" aria-controls="round-trip" aria-selected="false">ไปและกลับ</button>
-                </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="one-way" role="tabpanel" aria-labelledby="one-way-tab">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="from" class="form-label">จาก</label>
-                                <input type="text" class="form-control form-control-lg" id="from" placeholder="ต้นทาง">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="to" class="form-label">ไปยัง</label>
-                                <input type="text" class="form-control form-control-lg" id="to" placeholder="ปลายทาง">
-                            </div>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-md-6 pt-3">
-                                <label for="departure-date" class="form-label">วันที่ออกเดินทาง</label>
-                                <input type="date" class="form-control form-control-lg" id="departure-date">
-                            </div>
-                            <div class="col-md-3 pt-3">
-                                <label for="departure-date" class="form-label">จำนวนผู้โดยสาร</label>
-                                <input type="number" name="" id="" class="form-control form-control-lg"
-                                    placeholder="ผู้ใหญ่">
-                            </div>
-                            <div class="col-md-3 pt-3">
-                                <label for="departure-date" class="form-label">&nbsp;</label>
-                                <div class="d-grid gap-3">
-                                    <button type="button" class="btn btn-lg btn-danger btn-block">จองตั๋ว</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="tab-pane fade" id="round-trip" role="tabpanel" aria-labelledby="round-trip-tab">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="from" class="form-label">จาก</label>
-                                <input type="text" class="form-control form-control-lg" id="from" placeholder="ต้นทาง">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="to" class="form-label">ไปยัง</label>
-                                <input type="text" class="form-control form-control-lg" id="to" placeholder="ปลายทาง">
-                            </div>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-md-3 pt-3">
-                                <label for="departure-date" class="form-label">วันที่ออกเดินทาง</label>
-                                <input type="date" class="form-control form-control-lg" id="departure-date">
-                            </div>
-                            <div class="col-md-3 pt-3">
-                                <label for="departure-date" class="form-label">วันที่กลับ</label>
-                                <input type="date" class="form-control form-control-lg" id="departure-date">
-                            </div>
-                            <div class="col-md-3 pt-3">
-                                <label for="departure-date" class="form-label">จำนวนผู้โดยสาร</label>
-                                <input type="number" name="" id="" class="form-control form-control-lg"
-                                    placeholder="ผู้ใหญ่">
-                            </div>
-                            <div class="col-md-3 pt-3">
-                                <label for="departure-date" class="form-label">&nbsp;</label>
-                                <div class="d-grid gap-3">
-                                    <button type="button" class="btn btn-lg btn-danger btn-block">จองตั๋ว</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div> -->
-
->>>>>>> parent of 7b64237 (dev)
         </div>
     </section>
 
