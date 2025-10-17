@@ -23,6 +23,7 @@
 
 <body>
     <?php
+        $app_name = "JKP Transport";
         $lang = (isset($_GET['lang']) && $_GET['lang'] === "en_US") ? "en_US" : "th_TH";
 
         // data
@@ -35,7 +36,10 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="./assets/images/logo/logo-new-2.webp" alt="logo"></a>
+                <a class="navbar-brand" href="#">
+                    <!-- <img src="./assets/images/logo/logo-new-2.webp" alt="logo"> -->
+                    <?=$app_name ?? ""?>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -73,8 +77,8 @@
 
     <section class="banner">
         <div class="banner-content text-center mt-5">
-            <h1>Alpha Online Bus Booking</h1>
-            <h2>Check bus schedules, low prices, book online 24 Hours</h2>
+            <h1>JKP Transport Online Booking</h1>
+            <h2>Check van schedules, low prices, book online 24 Hours</h2>
         </div>
         <div class="form-search container p-4 rounded ">
              <div id="busx-search-form" data-url="https://booking.lignitetour.com" data-appkey="c79a84e0cf1d68d44d98e18751ab60e8" data-locale="th_TH" data-color="#F4B315" data-btn="Booking"></div>
@@ -168,11 +172,11 @@
     <footer class="site-footer text-light mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5 class="mb-3">Alpha</h5>
+                <div class="col-md-3 mb-3">
+                    <h5 class="mb-3"><?=$app_name ?? ""?></h5>
                     <p>Book bus tickets online across Thailand easy, safe, and convenient Find routes and reserve your seat on all major travel lines nationwide.</p>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-3 mb-3">
                     <h5 class="mb-3">Main Menu</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="footer-link">Home</a></li>
@@ -181,12 +185,16 @@
                         <li><a href="#" class="footer-link">Contact us</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <h5 class="mb-3">Contact us</h5>
-                    <p class="mb-1">123 bangkok</p>
-                    <p class="mb-1"> 022222222</p>
-                    <p class="mb-3">xx@mail.com</p>
-                    <div class="card-contact-footer">
+                <div class="col-md-3 mb-3">
+                    <h5 class="mb-3">Legal</h5>
+                     <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5 class="mb-3">Follow up</h5>
+                    <div class="card-followup-footer">
                         <a href="#" class="social-icon me-2"><i class="bi bi-telephone"></i></a>
                         <a href="#" class="social-icon me-2"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="social-icon me-2"><i class="bi bi-line"></i></a>
@@ -195,7 +203,7 @@
             </div>
             <hr class="border-secondary my-3" />
             <div class="text-center small">
-                © 2025 Alpha. All rights reserved.
+                © 2025 <?=$app_name ?? ""?>. All rights reserved.
             </div>
         </div>
     </footer>

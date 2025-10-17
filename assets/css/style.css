@@ -72,13 +72,14 @@ html, body {
 header {
   z-index: 1000;
   background-color: var(--background-color) !important;
-  padding: var(--padding);
   text-align: center;
   position: fixed;
   width: 100%;
 
   .navbar-brand {
-      img {
+    color: var(--rangoon);
+
+    img {
       height: 40px;
       width: auto;
       margin-right: 10px;
@@ -277,6 +278,10 @@ main {
         gap: 80px;
         max-width: 1320px;
         margin: 0 auto;
+
+        @media screen and (max-width: 569px) {
+          gap: 0px !important;          
+        }
       }
 
       .feature-card {
@@ -402,13 +407,14 @@ main {
 
 
 footer {
-    color: #FFFFFF;
-    h1,h2,h3,h4,h5,h6, a, span {
-      color: #FFFFFF;
+    padding: 0px;
+    /* padding: 50px; */
+    /* background-color: var(--theame-color-footer); */
+    
+    h1,h2,h3,h4,h5,h6, a, p ,span, div {
+      color: var(--rangoon);
     }
-
-    padding: 50px;
-    background-color: var(--theame-color-footer);
+    
     .site-footer {
         font-size: 14px;
     }
@@ -416,12 +422,14 @@ footer {
     .site-footer h5, 
     .site-footer h6 {
         font-weight: 600;
-        color: var(--background-color);
+        color: var(--rangoon);
     }
-
+    .container {
+      background-color: rgba(var(--fawnRGB), 0.2);
+      padding: 30px;
+      border-radius: var(--border-radius-card);
+    }
     .footer-link {
-        color: var(--background-color);
-
         text-decoration: none;
     }
     .footer-link:hover {
@@ -431,7 +439,6 @@ footer {
 
     .social-icon {
         font-size: 18px;
-        color: var(--background-color);
     }
     .social-icon:hover {
         color: var(--beer);
