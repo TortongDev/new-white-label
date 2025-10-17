@@ -1,0 +1,26 @@
+[
+    {
+        "province_from": "Bangkok",
+        "province_to": "Phuket",
+        "description": "Phuket is Thailand’s largest tourist island, renowned for its beautiful beaches, clear waters, local culture, and fresh seafood.",
+        "image": "phuket-thailand.webp"
+    },
+    {
+        "province_from": "Bangkok",
+        "province_to": "Trat",
+        "description": "Trat is a province in eastern Thailand, known for its beautiful islands, clear waters, and vibrant marine life.",
+        "image": "trat-thailand.webp"
+    },
+    {
+        "province_from": "Bangkok",
+        "province_to": "Chiang Mai",
+        "description": "Chiang Mai is known for its stunning temples, vibrant night markets, and beautiful mountain scenery.",
+        "image": "chiangmai-thailand.webp"
+    },
+    {
+        "province_from": "Bangkok",
+        "province_to": "Kanchanaburi",
+        "description": "Kanchanaburi is a province in western Thailand, known for its stunning natural beauty, waterfalls, and historical sites.",
+        "image": "kanchanaburi-thailand.webp"
+    }
+]

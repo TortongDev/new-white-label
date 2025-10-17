@@ -32,13 +32,16 @@
 
         $our_provider = file_get_contents('./data/our-providers.json');
         $our_provider = json_decode($our_provider, true);
+
+        $why_choose = file_get_contents("./data/why-choose.json");
+        $why_choose = json_decode($why_choose, true);
     ?>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <!-- <img src="./assets/images/logo/logo-new-2.webp" alt="logo"> -->
-                    <?=$app_name ?? ""?>
+                    <img src="./assets/images/logo/logo.svg" alt="logo">
+                    <span><?=$app_name ?? ""?></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,27 +49,28 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
+                        <li class="nav-itempe-1 pe-2">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
-                        <li class="nav-item">
+                         <li class="nav-item pe-2">
                             <a class="nav-link" href="#">Routes</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">News/Promotion</a>
+                        <li class="nav-item pe-2">
+                            <a class="nav-link" href="#">Manage Ticket</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Manage Booking</a>
-                        </li>
-                        <li class="nav-item">
+                        <li class="nav-item pe-2">
                             <a class="nav-link" href="#">Contact us</a>
                         </li>
 
                         <li class="nav-item d-none d-md-block">&nbsp;</li>
-                        <li class="nav-item d-flex justify-content-center align-items-center me-3 ms-3 lang">
-                            <a class="nav-link" href="#"><img src="./assets/images/lang/lang-th.png" class="me-1" alt="logo lang th"> TH <i class="bi bi-check-lg ms-1 <?=($lang == 'th_TH') ? "d-block" : "d-none" ?>"></i></a>
-                            <a class="nav-link d-block d-md-none" href="#">&nbsp;</a>
-                            <a class="nav-link" href="#"><img src="./assets/images/lang/lang-us.png" class="me-1" alt="logo lang en"> EN <i class="bi bi-check-lg ms-1 <?=($lang == 'en_US') ? "d-block" : "d-none" ?>"></i></a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link lang dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-globe"></i> Language
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item d-flex" href="#"><img src="./assets/images/lang/lang-th.png" class="me-1" alt="logo lang th"> TH <i class="bi bi-check-lg ms-1 <?=($lang == 'th_TH') ? "d-block" : "d-none" ?>"></i></a></li>
+                                <li><a class="dropdown-item d-flex" href="#"><img src="./assets/images/lang/lang-us.png" class="me-1" alt="logo lang en"> EN <i class="bi bi-check-lg ms-1 <?=($lang == 'en_US') ? "d-block" : "d-none" ?>"></i></a></li>
+                            </ul>
                         </li>
 
                     </ul>
@@ -96,8 +100,11 @@
                     <div class="destination-card">
                         <img src="./assets/images/popular-destinations/<?=$row_destination['image'];?>" alt="Phuket Thailand">
                         <div class="card-content">
-                            <h3><?=$row_destination['province_from'];?> <i class="bi bi-arrow-right"></i> <?=$row_destination['province_to'];?></h3>
-                            <p><?=$row_destination['description'];?></p>
+                            <h3>
+                                <?=$row_destination['province_from'];?>
+                                &emsp;<i class="bi bi-arrow-right"></i>&emsp;
+                                <?=$row_destination['province_to'];?></h3>
+                            <p>Price <?=$row_destination['price']." ".$row_destination['currency'];?></p>
                             <div class="d-grid">
                                 <button class="btn book-now">Book Now</button>
                             </div>
@@ -109,34 +116,22 @@
 
         <section class="why-choose">
           <div class="card-title">
-                <h1>Why Choose Alpha</h1>
+                <h1>Why Choose <?=$app_name ?? ""?>?</h1>
             </div>
         <div class="features-grid">
-            <div class="feature-card">
-            <div class="icon">
-                <img src="./assets/images/why-choose/bus.svg" alt="Bus Front" width="35">
-            </div>
-            <h3>Comfortable Buses</h3>
-            <p>Travel in comfort with our modern and well-maintained buses.</p>
-            </div>
+            <?php
+                foreach ($why_choose as $row_why_choose) {
+            ?>
+                    <div class="feature-card">
+                        <div class="icon">
+                            <img src="./assets/images/why-choose/<?=$row_why_choose['image'] ?? ""?>" alt="image <?=$row_why_choose['title']?? ""?>" width="35">
+                        </div>
+                        <h3><?=$row_why_choose['title'] ?? ""?></h3>
+                        <p><?=$row_why_choose['description'] ?? ""?></p>
+                    </div>
+            <?php } ?>
 
-            <div class="feature-card">
-            <div class="icon">
-                <img src="./assets/images/why-choose/time.svg" alt="Clock" width="35">
-
-            </div>
-            <h3>Flexible Schedules</h3>
-            <p>Choose from a wide range of departure times to suit your schedule.</p>
-            </div>
-
-            <div class="feature-card">
-            <div class="icon">
-                <img src="./assets/images/why-choose/currency.svg" alt="Price" width="35">
-
-            </div>
-            <h3>Affordable Prices</h3>
-            <p>Enjoy competitive prices and save on your travel expenses.</p>
-            </div>
+            
         </div>
         </section>
         <section class="provider-section">
@@ -203,7 +198,7 @@
             </div>
             <hr class="border-secondary my-3" />
             <div class="text-center small">
-                © 2025 <?=$app_name ?? ""?>. All rights reserved.
+                © <?=date('Y')?> <?=$app_name ?? ""?>. All rights reserved.
             </div>
         </div>
     </footer>

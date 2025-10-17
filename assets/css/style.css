@@ -5,6 +5,7 @@
     --fawn: #D3AF85;
     --fawnRGB: 211, 175, 133;
     --beer: #F4B315;
+    --beerRGB: 244, 179, 21;
     --gamboge: #E59312;
 
 
@@ -75,18 +76,22 @@ header {
   text-align: center;
   position: fixed;
   width: 100%;
+  display: flex;
+  justify-content: center;
 
   .navbar-brand {
     color: var(--rangoon);
 
     img {
-      height: 40px;
+      height: 28px;
       width: auto;
-      margin-right: 10px;
     }
   }
   .navbar {
+    width: 1320px;
     border: 1px solid #dee2e6;
+    border-right: 0;
+    border-left: 0;
 
     & button.navbar-toggler {
       border: 1px var(--theame-color) solid !important;
@@ -102,8 +107,10 @@ header {
           color: var(--beer) !important;
         }
     }
+      & a.lang {
+          color: var(--beer) !important;
+      }
     .nav-item {
-      /* font-weight: bold; */
       img {
         height: 20px;
         width: auto;
@@ -114,7 +121,8 @@ header {
   .bi-box-arrow-in-right::before {
      font-weight: bold !important;
   }
-  .lang {
+ 
+  /* .lang {
     & a.nav-link {
       display: flex;
 
@@ -122,13 +130,13 @@ header {
         color: var(--gamboge);
       }
     }
-  }
+  } */
 }
 
 /* Banner */
 .banner {
   border-radius: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/banner/263.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('../images/banner/263.jpg');
   background-size: cover;
   backdrop-filter: brightness(0.7);
   background-repeat: no-repeat;
@@ -136,15 +144,25 @@ header {
   padding: 20px;
   font-weight: bold;
   position: relative;
-  top: 56px;
-  width: 100%;
+  /* top: 56px; */
+  /* width: 100%; */
   height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: var(--border-radius-card);
+  width: 1320px;
+  max-width: 100%;
+  margin: auto;
+  top: 76px;
+
 
   @media (max-width: 1400px){
     background-position: center !important;
+  }
+  @media (max-width: 1320px){
+    top: 50px;
+    border-radius: 0;
   }
   
   .banner-content {
@@ -160,10 +178,12 @@ header {
 
     /* form search from busx */
     .container-search {
-
+      .btn-search {
+        color: var(--rangoon) !important;
+      }
       .box-centent {
-        width: 100%;
-        padding: 30px;
+        width: 1180PX;
+        padding: 35px;
         border-radius: var(--border-radius-card);
       }
     }
@@ -188,9 +208,12 @@ header {
   }
 }
 main {
-  margin: 100px auto;
+  margin: 128px auto;
   max-width: 100%;
 
+    @media (max-width: 1200px){
+      margin: 200px 0 0 0;
+    }
     @media (max-width: 767px){
       margin: 340px 10px 100px 10px;
     }
@@ -200,8 +223,12 @@ main {
       font-family: sans-serif;
       padding: 10px;
       display: block;
-      margin: 35px auto;
+      margin: 75px auto;
       max-width: 1320px;
+
+        /* .card-title {
+            text-align: start;
+        } */
 
         .destinations-grid {
           display: grid;
@@ -243,6 +270,7 @@ main {
             & button.book-now {
               background-color: var(--beer);
               border-radius: var(--border-radius-card);
+              color: var(--rangoon) !important;
 
               &:hover {
                 opacity: .8;
@@ -264,18 +292,17 @@ main {
     section.why-choose {
       text-align: center;
       font-family: sans-serif;
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding: 10px;
       display: block;
-      margin: 35px auto;
-      max-width: 100%;
-      background-color: var(--theame-color-section);
-
+      margin: 75px auto;
+      /* max-width: 100%; */
+      max-width: 1320px;
+      /* background-color: var(--theame-color-section); */
+      
       .features-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 80px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
         max-width: 1320px;
         margin: 0 auto;
 
@@ -285,12 +312,15 @@ main {
       }
 
       .feature-card {
-        max-width: 250px;
+        box-shadow: var(--box-shadow);
         text-align: center;
         background-color: #ffffff;
         padding: 20px;
-        /* border-radius: var(--border-radius-card); */
+        border-radius: var(--border-radius-card);
 
+        @media screen and (max-width: 569px){
+          margin: 10px;
+        }
         & .icon {
           width: 50px;
           height: 50px;
@@ -323,14 +353,13 @@ main {
     }
 
     .provider-section {
-      margin: 35px auto;
+      margin: 75px auto;
       max-width: 1320px;
       text-align: center;
       font-family: sans-serif;
-      padding-top: 40px;
+      /* padding-top: 40px; */
       padding-bottom: 40px;
       display: block;
-      border-radius: var(--border-radius-card);
 
       h2 {
         font-size: 28px;
@@ -366,16 +395,17 @@ main {
       }
 
       .provider-card {
+        box-shadow: var(--box-shadow);
         background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        /* border: 1px solid #ddd; */
+        border-radius: var(--border-radius);
+        /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
         display: flex;
         align-items: center;
         justify-content: center;
         transition: transform 0.3s ease;
         overflow: hidden;
-        max-width: 150px;
+        max-width: 100px;
 
         /* @media (max-width: 1000px) {
           max-width: 150px;
@@ -399,7 +429,7 @@ main {
       .provider-card img {
         max-width: 100%;
         max-height: 100%;
-        padding: 30px;
+        padding: 20px;
         object-fit: contain;
       }
     }
@@ -410,7 +440,9 @@ footer {
     padding: 0px;
     /* padding: 50px; */
     /* background-color: var(--theame-color-footer); */
-    
+    @media (max-width: 1320px){
+      background-color: rgba(var(--beerRGB), 0.1) !important;
+    }
     h1,h2,h3,h4,h5,h6, a, p ,span, div {
       color: var(--rangoon);
     }
@@ -425,9 +457,14 @@ footer {
         color: var(--rangoon);
     }
     .container {
-      background-color: rgba(var(--fawnRGB), 0.2);
+      background-color: rgba(var(--beerRGB), 0.1);
       padding: 30px;
       border-radius: var(--border-radius-card);
+      
+      @media (max-width: 1320px){
+        border-radius: 0;
+        background-color: unset;
+      }
     }
     .footer-link {
         text-decoration: none;
@@ -448,23 +485,23 @@ footer {
 
 
 @media (min-width: 1200px) {
-  section.popular-destinations, section.why-choose .provider-section {
+  section.popular-destinations, section.why-choose .provider-section{
     max-width: 1140px;
   }
 }
 @media (min-width: 992px) {
-  section.popular-destinations, section.why-choose .provider-section  {
+  section.popular-destinations, section.why-choose .provider-section {
       max-width: 960px;
   }
 }
 
 @media (min-width: 768px) {
-  section.popular-destinations, section.why-choose .provider-section  {
+  section.popular-destinations, section.why-choose .provider-section {
       max-width: 720px;
   }
 }
 @media (min-width: 576px) {
-  section.popular-destinations, section.why-choose .provider-section  {
+  section.popular-destinations, section.why-choose .provider-section {
       max-width: 540px;
   }
 }

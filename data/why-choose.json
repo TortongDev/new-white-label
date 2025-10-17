@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Safety",
+        "description": "Your safety is our top priority. We partner with trusted operators who adhere to the highest safety standards.",
+        "image": "icon-safety.svg"
+    },
+    {
+        "title": "Comfort",
+        "description": "Travel in comport with modern, air-conditioned buses aquipped with spacious seating.",
+        "image": "icon-comfort.svg"
+    },
+    {
+        "title": "On-time Service",
+        "description": "We value your time. Our buses are punctual, ensuring you reach your destination on schedule.",
+        "image": "icon-on-time-service.svg"
+    },
+    {
+        "title": "Easy Booking",
+        "description": "Our user-friendly platform makes it easy to book your tickets in just a few clicks.",
+        "image": "icon-easy-booking.svg"
+    }
+]
