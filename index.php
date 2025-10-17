@@ -81,10 +81,10 @@
 
     <section class="banner">
         <div class="banner-content text-center mt-5">
-            <h1>JKP Transport Online Booking</h1>
+            <h1>JKP Transport Booking</h1>
             <h2>Check van schedules, low prices, book online 24 Hours</h2>
         </div>
-        <div class="form-search container p-4 rounded ">
+        <div class="form-search container rounded ">
              <div id="busx-search-form" data-url="https://booking.lignitetour.com" data-appkey="c79a84e0cf1d68d44d98e18751ab60e8" data-locale="th_TH" data-color="#F4B315" data-btn="Booking"></div>
         </div>
     </section>
