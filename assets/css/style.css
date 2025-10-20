@@ -113,7 +113,7 @@ header {
 
         &:hover {
           transition: var(--transition);
-          color: var(--beerSoft) !important;
+          color: var(--beer) !important;
         }
     }
       & a.lang {
@@ -483,7 +483,7 @@ footer {
         text-decoration: none;
     }
     .footer-link:hover {
-        color: var(--beerSoft);
+        color: var(--beer);
         transition: var(--transition);
     }
 
@@ -491,7 +491,7 @@ footer {
         font-size: 18px;
     }
     .social-icon:hover {
-        color: var(--beerSoft);
+        color: var(--beer);
     }
 
 }
