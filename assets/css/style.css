@@ -40,9 +40,9 @@ html, body {
   font-family: var(--font-family);
   background-color: var(--background-color);
   /* background-color: rgba(var(--fawnRGB), 0.2); */
-  color: var(--text-color);
+  color: var(--rangoon);
   h1,h2,h3,h4,h5,h6, a, span {
-    color: var(--text-color);
+    color: var(--rangoon);
   }
   
 }
@@ -62,7 +62,7 @@ html, body {
     }
 
     p {
-      color: var(--text-color);
+      color: var(--rangoon);
       font-size: 0.95em;
       margin-bottom: 40px;
       line-height: 1.5;
